@@ -1,32 +1,20 @@
 import React from 'react';
-import { Nav, NavItem, NavLink } from 'reactstrap';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
+  import './SecondComponent.css';
 
-export default class Example extends React.Component {
-  render() {
-    return (
-      <div>
-        <p>List Based</p>
-        <Nav vertical>
-          <NavItem>
-            <NavLink href="#">Link</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">Link</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">Another Link</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink disabled href="#">Disabled Link</NavLink>
-          </NavItem>
-        </Nav>
-        <hr />
-        <p>Link based</p>
-        <Nav vertical>
-          <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another Link</NavLink> <NavLink disabled href="#">Disabled Link</NavLink>
-        </Nav>
-      </div>
-    );
-  }
+
+class NavDraw extends React.Component {
+  
 }
-export default FirstComp;
+export default NavDraw;
