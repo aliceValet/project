@@ -35,7 +35,7 @@ class NavBarre extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink to="/fillForm">Administration</NavLink>
+                <NavLink to="/admin">Administration</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

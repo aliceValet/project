@@ -5,25 +5,25 @@ import {
 
 const data = [
   {
-    name: 'Page A', uv: 1000, pv: 3000,
+    name: 'Page A', uv: 1, pv: 3,
   },
   {
-    name: 'Page B', uv: 6000, pv: 2000,
+    name: 'Page B', uv: 6, pv: 2,
   },
   {
-    name: 'Page C', uv: 10000, pv: 5000,
+    name: 'Page C', uv: 10, pv: 5,
   },
   {
-    name: 'Page D', uv: 8000, pv:1000,
+    name: 'Page D', uv: 8, pv:1,
   },
   {
-    name: 'Page E', uv: 2500, pv: 3000,
+    name: 'Page E', uv: 2, pv: 3,
   },
   {
-    name: 'Page F', uv: 100, pv:4000,
+    name: 'Page F', uv: 1, pv:4,
   },
   {
-    name: 'Page G', uv: 3500, pv: 7500,
+    name: 'Page G', uv: 3, pv: 7,
   },
 ];
 
@@ -32,10 +32,10 @@ class BarreCharte extends PureComponent {
 
   render() {
     return (
-      <div style={{ width: '80%', height: 500, margin : 50}}>
+      <div style={{ width: '100%', height: 300, margin : 20}}>
         <ResponsiveContainer>
           <BarChart
-            width={1000}
+            width={10000}
             height={500}
             data={data}
             margin={{
@@ -47,8 +47,8 @@ class BarreCharte extends PureComponent {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="pv" stackId="a" fill="#F04E98" />
-            <Bar dataKey="uv" stackId="a" fill="#FFCD00" />
+            <Bar name ="Playlists" dataKey="pv" stackId="a" fill="#F04E98" />
+            <Bar name ="Personal search" dataKey="uv" stackId="a" fill="#FFCD00" />
           </BarChart>
            </ResponsiveContainer>
       </div>

@@ -5,25 +5,31 @@ import {
 
 const data = [
   {
-    name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
+    name: '00h', uv: 0, pv: 0,
   },
   {
-    name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
+    name: '3h', uv: 0, pv: 0,
   },
   {
-    name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
+    name: '6h', uv: 30, pv: 50,
   },
   {
-    name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
+    name: '9h', uv: 10, pv: 20, 
   },
   {
-    name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
+    name: '12h', uv: 0, pv: 0, 
   },
   {
-    name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
+    name: '15h', uv: 0, pv: 0, 
   },
   {
-    name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
+    name: '18h', uv: 0, pv: 50, 
+  },
+  {
+    name: '21h', uv: 40, pv: 100, 
+  },
+  {
+    name: '00h', uv: 20, pv: 50, 
   },
 ];
 
@@ -32,7 +38,7 @@ class LineGraph extends PureComponent {
 
   render() {
     return ( 
-      <div style={{ width: '80%', height: 500, margin : 50}}>
+      <div style={{ width: '100%', height: 300, margin : 20}}>
         <ResponsiveContainer>
       
       <LineChart
@@ -48,8 +54,8 @@ class LineGraph extends PureComponent {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="pv" stroke="#B0008E" activeDot={{ r: 8 }} />
-        <Line type="monotone" dataKey="uv" stroke="#FFCD00" />
+        <Line name="Winter" type="monotone" dataKey="pv" stroke="#B0008E" activeDot={{ r: 8 }} />
+        <Line name="Summer" type="monotone" dataKey="uv" stroke="#FFCD00" />
       </LineChart>
       </ResponsiveContainer>
       </div>
