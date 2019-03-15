@@ -7,7 +7,7 @@ class FirstComp extends React.Component {
   
   render() {
     return (
-    	 <Table hover>
+    	 <Table hover style={{width:'100%'}}>
         <thead>
           <tr>
             <th>Trending Artists</th>

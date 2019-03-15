@@ -3,6 +3,7 @@ import {
   ResponsiveContainer
 } from 'recharts';
 import { Card, Button, CardTitle, CardText, Media } from 'reactstrap';
+import kitty from "./Cat.jpg"
 
 class CardeTwo extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/90v76x08/';
@@ -14,9 +15,9 @@ class CardeTwo extends PureComponent {
           <Card body inverse style={{ backgroundColor: '#000000', borderColor: '#F04E98' }} className="text-left">
             
               <Media>
-                <Media left href="#">
-                  <Media object data-src="Cat.jpg" alt="Profile Pic" style={{margin: 20}}/>
-                </Media>
+                
+                  <Media object src={kitty} alt="Profile Pic" style={{width:'60%', borderRadius:'50%'}}/>
+                
                 <Media body style={{fontSize: "18px"}} >
                   <Media heading style={{fontSize: "30px"}}>
                     Hello, Helen.

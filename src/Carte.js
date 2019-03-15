@@ -12,9 +12,8 @@ class Carde extends PureComponent {
       <div style={{ width: '50%', height: 300, margin : 20}}>
         <ResponsiveContainer>
           <Card body inverse style={{ backgroundColor: '#000000', borderColor: '#F04E98' }} className="text-center">
-        <CardTitle>Total hours of playing music</CardTitle>
+        <CardTitle>Total hours of playing music this week</CardTitle>
         <CardText>65h</CardText>
-        <Button>Go somewhere</Button>
       </Card>
            </ResponsiveContainer>
       </div>
