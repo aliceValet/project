@@ -6,6 +6,6 @@ import App from "./App";
 export default ()=>(
 	<Switch>
 	<Route path="/" exact component={App}/>
-	<Route path="/admin" exact component={FillForm}/>
+	<Route path="/fillForm" component={FillForm}/>
 	</Switch>
 	);

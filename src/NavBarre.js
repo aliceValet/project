@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -35,7 +36,7 @@ class NavBarre extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink to="/admin">Administration</NavLink>
+                <NavLink tag={Link} to="/fillForm">Administration</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

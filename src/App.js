@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Route from "./routes";
+import Routes from "./routes";
 
 import FirstComp from "./FirstComponent";
 import SecondComp from "./SecondComponent";
@@ -37,22 +37,13 @@ class App extends Component {
 		        </Row>
 
 	      </Container>
+	      <FillForm/>
 
 		        
 	    </div>
     </div>
 
     );
-    return (
-    	<div className="App">
-		    <NavBarre />
-		    <div className="App-header">
-
-	    		<FillForm/>
-			</div>
-		</div>
-
-    	);
   }
 }
 
