@@ -4,7 +4,6 @@ import './App.css';
 import Routes from "./routes";
 
 import FirstComp from "./FirstComponent";
-import SecondComp from "./SecondComponent";
 import NavDraw from "./NavDrawer";
 import NavBarre from "./NavBarre";
 import FillForm from "./FillForm";
@@ -13,6 +12,7 @@ import LineGraph from "./LineGraf";
 import BarreCharte from "./BarreChart";
 import AreaCharte from "./ZoneChart";
 import Carde from "./Carte";
+import CardeTwo from "./CarteTwo";
 import { Container, Row, Col } from 'reactstrap';
 
 class App extends Component {
@@ -26,7 +26,7 @@ class App extends Component {
 		    <Container>
 		        <Row>
 		          <Col sm="12" xl="6"><PieChart/></Col>
-		          <Col sm="12" xl="6"><AreaCharte/></Col>
+		          <Col sm="12" xl="6"><CardeTwo/></Col>
 		        </Row>
 		        <Row>
 		          <Col sm="12" md="12" xl="6"><LineGraph/></Col>
@@ -37,7 +37,6 @@ class App extends Component {
 		        </Row>
 
 	      </Container>
-	      <FillForm/>
 
 		        
 	    </div>

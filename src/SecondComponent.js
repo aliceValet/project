@@ -1,6 +1,4 @@
 import React from 'react';
-import './SecondComponent.css';
-
 class SecondComp extends React.Component {
   
   render() {

@@ -1,48 +1,65 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import './FillForm.css';
+import NavBarre from './NavBarre';
 
 
 class FillForm extends React.Component {
   render() {
     return (
-      <Form style={{margin:20}}>
+      <div className="filling">
+      <NavBarre/>
+      <Form style={{backgroundColor: "100",margin:20}}>
         <FormGroup>
-          <Label for="exampleEmail">Your Email</Label>
-          <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email address here" />
+          <Label for="SurName">Add a new artist</Label>
+          <Input type="text" name="surname" id="NomFam" placeholder="Name" />
         </FormGroup>
         <FormGroup>
-          <Label for="SurName">Your info</Label>
-          <Input type="text" name="surname" id="NomFam" placeholder="Your Surname" />
-        </FormGroup>
-        <FormGroup>
-          <Input type="text" name="name" id="Prenom" placeholder="Your First Name" />
+          <Input type="text" name="name" id="Prenom" placeholder="Name of the Album" />
         </FormGroup>
          <FormGroup>
-          <Input type="text" name="birthday" id="BirthDate" placeholder="Enter your birthday : DD/MM/YYYY" />
-        </FormGroup>
-        <FormGroup>
-          <Label for="Expectation">Your Expectations</Label>
-          <Input type="select" name="select" id="exampleSelect">
-            <option>Know your favorite artists</option>
-            <option>Monitor your consumption of music</option>
-            <option>Know your favorite styles</option>
-          </Input>
+          <Input type="text" name="birthday" id="BirthDate" placeholder="Date of realease : YYYY" />
         </FormGroup>
         <FormGroup >
-          <Label for="exampleFile">Your Photo</Label>
+          <Label for="exampleFile">Album Cover Photo</Label>
            <FormText color="muted">
-            You can upload a photo for your profile down here.
+            You can upload the photo of the album you want to add down here.
           </FormText>
           <Input type="file" name="file" id="exampleFile" style={{margin:50}}/>
         </FormGroup>
+        <FormGroup>
+          <Label for="Expectation">Tracks</Label>
+          <FormText color="muted" style={{margin : 10}}>
+            How many tracks do you want to import from this album ?
+          </FormText>
+          <Input type="select" name="select" id="exampleSelect">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+
+          </Input>
+        </FormGroup>
+        <FormGroup>
+          <Input type="text" name="TrackTitle" id="TrackTit" placeholder="Title" />
+        </FormGroup>
+        
+        
         <FormGroup check>
           <Label check>
             <Input type="checkbox" />{' '}
-            I agree that this information is correct and will be stored
+            I want all these tracks imported at once.
           </Label>
         </FormGroup>
         <Button style={{backgroundColor:"#000000", borderColor:"#FFCD00", margin:50}} >Submit</Button>
       </Form>
+      </div>
     );
   }
 }
