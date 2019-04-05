@@ -4,6 +4,7 @@ import { Table } from 'reactstrap';
 
 import axios from 'axios';
 import _ from 'lodash';
+import moment from 'moment';
 
 class FirstComp extends React.Component {
 

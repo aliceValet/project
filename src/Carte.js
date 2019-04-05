@@ -11,7 +11,7 @@ class Carde extends PureComponent {
 
   state = {
     tracksList: [],
-    count :0
+    count:0
   }
 
   componentDidMount(){
@@ -19,20 +19,22 @@ class Carde extends PureComponent {
       .then(res => {
         console.log("res.dat", res.data);
           this.setState({ tracksList: res.data });
+
         });
+
   }
 
   render() {
+    {_.map(this.state.tracksList, o =>this.state.count=this.state.count + o.Listenings)}
     return (
       <div style={{ width: '50%', height: 300, margin : 20}}>
         <ResponsiveContainer>
           <Card body inverse style={{ backgroundColor: '#000000', borderColor: '#F04E98' }} className="text-center">
         <CardTitle>Total listenings this week</CardTitle>
+
         <CardText>
-        {_.map(this.state.tracksList, o =>
-          this.state.count= parseInt(this.state.count)+parseInt(o.Listenings)
           
-        )}
+          <p>{this.state.count}</p>
         </CardText>
       </Card>
            </ResponsiveContainer>
