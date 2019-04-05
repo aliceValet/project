@@ -2,8 +2,23 @@ import React from 'react';
 import './FirstComponent.css';
 import { Table } from 'reactstrap';
 
+import axios from 'axios';
+import _ from 'lodash';
 
 class FirstComp extends React.Component {
+
+  state = {
+    artistList: []
+  }
+
+  componentDidMount(){
+     axios.get(`http://localhost:3000/artists/`)
+      .then(res => {
+        console.log("res.dat", res.data);
+          this.setState({ artistList: res.data });
+        });
+
+  }
   
   render() {
     return (
@@ -11,31 +26,24 @@ class FirstComp extends React.Component {
         <thead>
           <tr>
             <th>Trending Artists</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Hit</th>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Followers</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Nate</td>
-            <td>Feuerstein</td>
-            <td>Outcast</td>
+        {_.map(this.state.artistList, o =>
+          
+            <tr>
+            <th scope="row">{_.uniqueId()}</th>
+            <td>{o.Name}</td>
+            <td>{o.Birthday}</td>
+            <td>{o.Followers}</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Destinys</td>
-            <td>Child</td>
-            <td>Survivor</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Calum</td>
-            <td>Scott</td>
-            <td>What I Miss Most</td>
-          </tr>
-        </tbody>
+          
+        )}
+          
+                </tbody>
       </Table>
     	
     );

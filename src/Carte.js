@@ -13,7 +13,6 @@ class Carde extends PureComponent {
     this.state = {
       Listenings : null
     }
-
   }
   componentDidMount(){
     axios.get("http://localhost:3000/tracks/")
