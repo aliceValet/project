@@ -1,3 +1,6 @@
+I have done this project ALONE. I have overcome many ordeals, clearly struggling with reactjs. 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
