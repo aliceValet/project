@@ -4,21 +4,22 @@ import {
 } from 'recharts';
 import { Card, Button, CardTitle, CardText } from 'reactstrap';
 import axios from 'axios';
+import _ from 'lodash';
 
 class Carde extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/90v76x08/';
 
-  constructor(props){
-    super(props);
-    this.state = {
-      Listenings : null
-    }
+  state = {
+    tracksList: [],
+    count :0
   }
+
   componentDidMount(){
-    axios.get("http://localhost:3000/tracks/")
-    .then(res => {
-      this.setState({Listenings : res.data})
-    })
+     axios.get(`http://localhost:3000/tracks/`)
+      .then(res => {
+        console.log("res.dat", res.data);
+          this.setState({ tracksList: res.data });
+        });
   }
 
   render() {
@@ -26,8 +27,13 @@ class Carde extends PureComponent {
       <div style={{ width: '50%', height: 300, margin : 20}}>
         <ResponsiveContainer>
           <Card body inverse style={{ backgroundColor: '#000000', borderColor: '#F04E98' }} className="text-center">
-        <CardTitle>Total hours of playing music this week</CardTitle>
-        <CardText>65h</CardText>
+        <CardTitle>Total listenings this week</CardTitle>
+        <CardText>
+        {_.map(this.state.tracksList, o =>
+          this.state.count= parseInt(this.state.count)+parseInt(o.Listenings)
+          
+        )}
+        </CardText>
       </Card>
            </ResponsiveContainer>
       </div>
