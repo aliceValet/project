@@ -3,22 +3,15 @@ import {
   ResponsiveContainer, PieChart, Pie, Legend, Sector, Cell,
 } from 'recharts';
 import './Pies.css'
-
-import axios from 'axios';
-import _ from 'lodash';
-const COLORS = ['#F04E98', '#74D2E7', '#B0008E', '#FFCD00'];
 const data = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
+  { name: 'RnB', value: 20 }, { name: 'Pop', value: 50 },
+  { name: 'Rap', value: 30 }, { name: 'Classical', value: 10 },
 ];
+const COLORS = ['#F04E98', '#74D2E7', '#B0008E', '#FFCD00'];
 
 
 class PieCharte extends PureComponent {
   static jsfiddleUrl = '//jsfiddle.net/alidingling/6okmehja/';
-
-  
 
   render() {
     return (
@@ -38,7 +31,7 @@ class PieCharte extends PureComponent {
 
         >
           {
-          data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
+            data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
           }
         </Pie>
         </PieChart>
